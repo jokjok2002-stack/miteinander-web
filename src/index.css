@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700&family=Lexend:wght@600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { min-height: 100%; }
+body { margin: 0; background: #fbf8f4; font-family: 'Atkinson Hyperlegible', system-ui, sans-serif; color: #241f1b; font-size: 18px; line-height: 1.5; }
+h1, h2, h3, .font-head { font-family: 'Lexend', 'Atkinson Hyperlegible', sans-serif; font-weight: 600; }
+button { font: inherit; cursor: pointer; }
+a { color: inherit; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visible, label:focus-within { outline: 3px solid #241f1b; outline-offset: 2px; }
+.skip { position: absolute; left: -999px; top: 8px; background: #241f1b; color: #fff; padding: 10px 16px; border-radius: 10px; z-index: 100; }
+.skip:focus { left: 8px; }
+
+@media print {
+  body { background: #fff; font-size: 14pt; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+}
+.print-only { display: none; }
